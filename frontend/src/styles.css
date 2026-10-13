@@ -42,6 +42,47 @@ body,
   background: var(--bg);
 }
 
+.board {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+}
+
+.board-sizer {
+  position: relative;
+}
+
+.board-world {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+}
+
+.board-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.board-message p {
+  margin: 0;
+}
+
+.board-error {
+  color: var(--danger);
+}
+
+.board-error-detail {
+  color: var(--muted);
+  font-size: 12px;
+}
+
 /* Preview. Lives in world space, so screen-sized text divides by --zoom. */
 .preview {
   position: absolute;
@@ -89,7 +130,8 @@ body,
   color: var(--danger);
 }
 
-.preview-status button {
+.preview-status button,
+.board-message button {
   font: inherit;
   font-size: 1em;
   padding: 0.3em 0.9em;
