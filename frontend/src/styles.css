@@ -1,0 +1,43 @@
+:root {
+  --bg: #e7e7ea;
+  --surface: #ffffff;
+  --text: #1c1c1e;
+  --muted: #6b6b70;
+  --border: #d4d4d8;
+  --danger: #b42318;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.toolbar-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.board-region {
+  position: relative;
+  min-height: 0;
+  background: var(--bg);
+}
